@@ -31,11 +31,11 @@ namespace Dgv.DAL
         public UserInfo[] GetAllData()
         {
             DataTable table = sqlhelp.ExecuteDataTable("select * from T_UserInfo");
-            UserInfo[] customers = new UserInfo[table.Rows.Count];
+            UserInfo[] user = new UserInfo[table.Rows.Count];
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DataRow row = table.Rows[i];
-                customers[i] = ToUserInfo(row);
+                user[i] = ToUserInfo(row);
             }
             return customers;
         }
