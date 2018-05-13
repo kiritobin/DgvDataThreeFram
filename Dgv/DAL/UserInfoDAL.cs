@@ -37,7 +37,7 @@ namespace Dgv.DAL
                 DataRow row = table.Rows[i];
                 user[i] = ToUserInfo(row);
             }
-            return customers;
+            return user;
         }
         #endregion
 
